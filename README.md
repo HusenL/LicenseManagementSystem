@@ -25,7 +25,8 @@ This system allows:
 ➡ Saves exporter for license issuance.
 
 ### Exporter Registration
-<img src="screenshots/Screenshot 2025-12-05 200514.png" width="500"/>
+### 1. Chatbot Screen
+<img src="screenshots/Screenshot 2025-12-05 200420.png" width="500"/>
 
 ---
 
@@ -36,7 +37,7 @@ This system allows:
 ➡ Generates a unique License Number.
 
 ### License Issuance
-<img src="screenshots/Screenshot 2025-12-05 200503.png" width="500"/>
+<img src="screenshots/Screenshot 2025-12-05 200433.png" width="500"/>
 
 ---
 
@@ -62,7 +63,7 @@ Display table includes:
 | ID | Product | Destination | Status | Cost($) | Insured | Timestamp |
 
 ### Shipment Records Filter
-<img src="screenshots/Screenshot 2025-12-05 200433.png" width="500"/>
+<img src="screenshots/Screenshot 2025-12-05 200503.png" width="500"/>
 
 ---
 
@@ -75,7 +76,7 @@ Contains:
 ➡ Chatbot logic/AI coming in future.
 
 ### Chatbot Screen
-<img src="screenshots/Screenshot 2025-12-05 200420.png" width="500"/>
+<img src="screenshots/Screenshot 2025-12-05 200514.png" width="500"/>
 
 ---
 
