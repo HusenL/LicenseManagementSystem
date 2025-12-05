@@ -24,6 +24,9 @@ This system allows:
 - Country  
 ➡ Saves exporter for license issuance.
 
+### Exporter Registration
+<img src="screenshots/Screenshot 2025-12-05 200514.png" width="500"/>
+
 ---
 
 ### 2️⃣ License Issuance
@@ -31,6 +34,9 @@ This system allows:
 - Auto-fills exporter information  
 - Enter expiry days  
 ➡ Generates a unique License Number.
+
+### License Issuance
+<img src="screenshots/Screenshot 2025-12-05 200503.png" width="500"/>
 
 ---
 
@@ -44,6 +50,9 @@ This system allows:
 - Insurance checkbox  
 ➡ Shipment entry stored in MySQL.
 
+### Shipment Entry (New Export)
+<img src="screenshots/Screenshot 2025-12-05 200450.png" width="500"/>
+
 ---
 
 ### 4️⃣ Shipment Filter
@@ -51,6 +60,9 @@ Filters shipments based on license reference.
 Display table includes:
 
 | ID | Product | Destination | Status | Cost($) | Insured | Timestamp |
+
+### Shipment Records Filter
+<img src="screenshots/Screenshot 2025-12-05 200433.png" width="500"/>
 
 ---
 
@@ -61,6 +73,9 @@ Contains:
 - User input field
 - Send button  
 ➡ Chatbot logic/AI coming in future.
+
+### Chatbot Screen
+<img src="screenshots/Screenshot 2025-12-05 200420.png" width="500"/>
 
 ---
 
