@@ -119,10 +119,10 @@ IntelliJ → File → Project Structure → Libraries → + → Java
 Select JavaFX/lib folder
 Add VM options before running:
              --module-path "path/to/javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml
-
+```
 
 4. MySQL Database Setup
-```
+
 CREATE DATABASE trade_license_system;
 USE trade_license_system;
 
