@@ -25,7 +25,7 @@ This system allows:
 ➡ Saves exporter for license issuance.
 
 ### Exporter Registration
-### 1. Chatbot Screen
+### 1. Exporter Registration
 <img src="screenshots/Screenshot 2025-12-05 200420.png" width="500"/>
 
 ---
@@ -36,7 +36,7 @@ This system allows:
 - Enter expiry days  
 ➡ Generates a unique License Number.
 
-### License Issuance
+### 2. License Issuance
 <img src="screenshots/Screenshot 2025-12-05 200433.png" width="500"/>
 
 ---
@@ -51,7 +51,7 @@ This system allows:
 - Insurance checkbox  
 ➡ Shipment entry stored in MySQL.
 
-### Shipment Entry (New Export)
+### 3. Shipment Entry (New Export)
 <img src="screenshots/Screenshot 2025-12-05 200450.png" width="500"/>
 
 ---
@@ -62,7 +62,7 @@ Display table includes:
 
 | ID | Product | Destination | Status | Cost($) | Insured | Timestamp |
 
-### Shipment Records Filter
+### 4. Shipment Records Filter
 <img src="screenshots/Screenshot 2025-12-05 200503.png" width="500"/>
 
 ---
@@ -75,7 +75,7 @@ Contains:
 - Send button  
 ➡ Chatbot logic/AI coming in future.
 
-### Chatbot Screen
+### 5. Chatbot Screen
 <img src="screenshots/Screenshot 2025-12-05 200514.png" width="500"/>
 
 ---
