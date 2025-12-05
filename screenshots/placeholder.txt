@@ -1,0 +1,16 @@
+## 📸 UI Preview
+
+### 1. Exporter Registration
+<img src="screenshots/exporter-registration.png" width="500"/>
+
+### 2. License Issuance
+<img src="screenshots/license-issuance.png" width="500"/>
+
+### 3. Shipment Entry
+<img src="screenshots/shipment-entry.png" width="500"/>
+
+### 4. Shipment Filter
+<img src="screenshots/shipment-filter.png" width="500"/>
+
+### 5. Trade Compliance Chatbot UI
+<img src="screenshots/chatbot-ui.png" width="500"/>
