@@ -122,7 +122,7 @@ Add VM options before running:
 ```
 
 4. MySQL Database Setup
-
+```
 CREATE DATABASE trade_license_system;
 USE trade_license_system;
 
@@ -154,16 +154,17 @@ CREATE TABLE shipments (
 );
 ```
 
-```
 Update DB credentials in code:
+```
 username = "root"
 password = "your-password"
 database = "trade_license_system"
-
-5. Run the Application
-Open: Main.java
 ```
 
+5. Run the Application
+Open: 
+```
+Main.java
 ```
 ## 👤 Author
 
