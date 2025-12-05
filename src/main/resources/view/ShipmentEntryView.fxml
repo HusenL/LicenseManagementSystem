@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.time.LocalDate?>
+
+<AnchorPane prefHeight="560.0" prefWidth="650.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.foreign_trade.controller.ShipmentController"
+            stylesheets="@/css/styles.css">
+
+    <children>
+        <!-- MENU BAR -->
+        <MenuBar prefWidth="650.0" AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu text="Navigate">
+                    <items>
+                        <MenuItem text="1. Exporter Registration" onAction="#handleNavigateToExporter" />
+                        <MenuItem text="2. License Issuance" onAction="#handleNavigateToLicense" />
+                        <MenuItem text="3. View Shipment Logs" onAction="#handleNavigateToShipmentLog" />
+                        <MenuItem text="4. Compliance Chatbot" onAction="#handleNavigateToChatbot" />
+                    </items>
+                </Menu>
+                <Menu text="Help" />
+            </menus>
+        </MenuBar>
+
+        <!-- HEADER -->
+        <Label styleClass="header-label"
+               text="Shipment Entry (New Export)"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.rightAnchor="20.0"
+               AnchorPane.topAnchor="60.0" />
+
+        <!-- FORM GRID -->
+        <GridPane layoutX="20.0" layoutY="120.0" prefWidth="610.0"
+                  AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+
+            <columnConstraints>
+                <ColumnConstraints prefWidth="160.0" />
+                <ColumnConstraints prefWidth="440.0" hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints prefHeight="45.0" />
+                <RowConstraints prefHeight="45.0" />
+                <RowConstraints prefHeight="45.0" />
+                <RowConstraints prefHeight="45.0" />
+                <RowConstraints prefHeight="45.0" />
+                <RowConstraints prefHeight="45.0" />
+                <RowConstraints prefHeight="45.0" />
+            </rowConstraints>
+
+            <Label text="License Ref:" GridPane.rowIndex="0" />
+            <ComboBox fx:id="licenseIdComboBox"
+                      GridPane.columnIndex="1" GridPane.rowIndex="0"
+                      promptText="Select License Number"
+                      prefHeight="36.0" />
+
+            <Label text="Product Name:" GridPane.rowIndex="1" />
+            <TextField fx:id="productNameField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"
+                       promptText="Enter product name" />
+
+            <Label text="Quantity (Tonnes):" GridPane.rowIndex="2" />
+            <TextField fx:id="quantityField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"
+                       promptText="e.g., 5000.00" />
+
+            <Label text="Destination Country:" GridPane.rowIndex="3" />
+            <TextField fx:id="destinationField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"
+                       promptText="Destination Country" />
+
+            <Label text="Total Cost ($):" GridPane.rowIndex="4" />
+            <TextField fx:id="costField"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"
+                       promptText="Cost of exported product" />
+
+            <Label text="Export Date:" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dateField"
+                        GridPane.columnIndex="1" GridPane.rowIndex="5"
+                        prefHeight="36.0" />
+
+            <Label text="Insurance:" GridPane.rowIndex="6" />
+            <CheckBox fx:id="hasInsuranceCheckbox"
+                      mnemonicParsing="false"
+                      text="Shipment is Insured"
+                      GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        </GridPane>
+
+        <!-- BUTTON -->
+        <Button text="Log &amp; Prepare Shipment"
+                AnchorPane.bottomAnchor="30.0"
+                AnchorPane.leftAnchor="200.0"
+                AnchorPane.rightAnchor="200.0"
+                prefHeight="40.0"
+                onAction="#handleLogShipmentButton" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,124 @@
+/* =========================================================
+   Final Corrected Stylesheet
+   Focus: Centering, Menu Contrast, and Input Text Clipping Fixes
+   ========================================================= */
+
+/* ---------- 1. GLOBAL ROOT AND BASE ---------- */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Noto Sans", Arial, sans-serif;
+    -fx-font-size: 13.5px;
+    -fx-background-color: linear-gradient(to bottom right, #f7fafd, #eef2f7);
+    -fx-text-fill: #1e1e1e;
+    -fx-padding: 10px;
+}
+
+/* ---------- 2. LABELS (Titles and Field Names) ---------- */
+.label {
+    -fx-font-weight: 500;
+    -fx-text-fill: #333333;
+    -fx-padding: 2 0 2 0;
+}
+
+/* ---------- PAGE TITLES (Centering Fix + Overlap Fix) ---------- */
+.label.header-label {
+    -fx-font-size: 26px; /* Larger font size */
+    -fx-font-weight: bold;
+    -fx-text-fill: #0078d7; /* Bright blue accent */
+    -fx-alignment: center;
+    -fx-max-width: 1.7976931348623157E308; /* Forces label to take full width */
+    -fx-padding: 20 0 16 0; /* Increased top padding (was 10 0 14 0) to prevent overlap */
+    -fx-effect: dropshadow(gaussian, rgba(0,120,215,0.25), 8, 0.25, 0, 2);
+}
+
+/* ---------- 3. INPUT FIELDS (Clarity and Clipping Fixes) ---------- */
+.text-field, .combo-box, .date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #b0c4de;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 12; /* Slightly wider padding for better visibility */
+    -fx-min-height: 38; /* Increased height (was 36) for clearer text */
+    -fx-pref-height: 38;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1a1a1a; /* Darker text for better contrast */
+}
+
+/* ComboBox and DatePicker Internal Text Fixes */
+.combo-box .list-cell,
+.combo-box .text-field,
+.date-picker .text-field {
+    -fx-text-fill: #1a1a1a;
+    -fx-font-size: 14px;
+    -fx-padding: 6 10 6 10; /* Keeps inner text fully visible */
+}
+
+/* Input Fields on Focus */
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 123, 255, 0.3), 5, 0.0, 0, 0);
+}
+
+/* ---------- 4. BUTTONS ---------- */
+.button {
+    -fx-background-color: linear-gradient(to bottom right, #0078d7, #0096e6);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 16;
+    -fx-padding: 10 28;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #0096e6, #00b4ff);
+}
+
+/* ---------- 5. MENU BAR CONTRAST FIX ---------- */
+.menu-bar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0 0 1px 0;
+}
+.menu:hover > .label { -fx-text-fill: #0078d7; }
+.menu-item:focused, .menu-item:hover {
+    -fx-background-color: #0078d7;
+}
+.menu-item:focused > .label, .menu-item:hover > .label {
+    -fx-text-fill: white;
+}
+
+/* ---------- 6. TABLE VIEW STYLING ---------- */
+.table-view .column-header-background {
+    -fx-background-color: #0f76c7;
+}
+.table-view .column-header .label {
+    -fx-text-fill: rgba(143, 60, 60, 0.64);
+    -fx-font-weight: bold;
+}
+.table-row-cell:selected {
+    -fx-background-color: #c9e6ff;
+}
+.table-row-cell:hover {
+    -fx-background-color: #e0e9f0;
+
+}
+
+.combo-box {
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;         /* Make text darker and visible */
+    -fx-background-color: #ffffff;  /* Ensure good contrast */
+    -fx-padding: 4 8 4 8;           /* Add inner space */
+    -fx-pref-height: 32px;          /* Increase height slightly */
+    -fx-border-color: #0078d7;      /* Optional: blue border for visibility */
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.combo-box .list-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+}
+
+.combo-box:focused {
+    -fx-border-color: #005a9e;      /* Highlight when active */
+    -fx-border-width: 1.5;
+}

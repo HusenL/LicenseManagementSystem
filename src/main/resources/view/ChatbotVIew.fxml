@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.foreign_trade.controller.ChatbotController"
+            stylesheets="@/css/styles.css">
+
+    <children>
+        <!-- Top Menu -->
+        <MenuBar prefWidth="600.0"
+                 AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu text="Navigate">
+                    <items>
+                        <MenuItem text="1. Exporter Registration" onAction="#handleNavigateToExporter" />
+                        <MenuItem text="2. License Issuance" onAction="#handleNavigateToLicense" />
+                        <MenuItem text="3. Ship New Export" onAction="#handleNavigateToShipmentEntry" />
+                        <MenuItem text="4. View Shipment Logs" onAction="#handleNavigateToShipmentLog" />
+                        <MenuItem text="5. Compliance Chatbot" onAction="#handleNavigateToChatbot" />
+                    </items>
+                </Menu>
+                <Menu text="Help" />
+            </menus>
+        </MenuBar>
+
+        <!-- Heading -->
+        <Label styleClass="header-label"
+               text="Trade Compliance Chatbot"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.rightAnchor="20.0"
+               AnchorPane.topAnchor="55.0" />
+
+        <!-- Chat Display -->
+        <TextArea fx:id="chatDisplayArea"
+                  editable="false"
+                  wrapText="true"
+                  AnchorPane.topAnchor="105.0"
+                  AnchorPane.leftAnchor="10.0"
+                  AnchorPane.rightAnchor="10.0"
+                  AnchorPane.bottomAnchor="65.0"
+                  prefHeight="300.0"
+                  prefWidth="580.0" />
+
+        <!-- User Input -->
+        <TextField fx:id="userInputField"
+                   promptText="Ask a question or check a license status..."
+                   onAction="#handleUserInput"
+                   AnchorPane.leftAnchor="10.0"
+                   AnchorPane.rightAnchor="85.0"
+                   AnchorPane.bottomAnchor="15.0"
+                   prefHeight="35.0" />
+
+        <!-- Send Button -->
+        <Button text="Send"
+                onAction="#handleUserInput"
+                AnchorPane.rightAnchor="10.0"
+                AnchorPane.bottomAnchor="15.0"
+                prefWidth="70.0"
+                prefHeight="35.0" />
+    </children>
+</AnchorPane>

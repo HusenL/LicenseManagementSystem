@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<AnchorPane prefHeight="420.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.foreign_trade.controller.LicenseController"
+            stylesheets="@/css/styles.css">
+
+    <children>
+        <!-- Menu -->
+        <MenuBar prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu text="Navigate">
+                    <items>
+                        <MenuItem text="1. Exporter Registration" onAction="#handleNavigateToExporter"/>
+                        <MenuItem text="2. License Issuance" onAction="#handleNavigateToLicense"/>
+                        <MenuItem text="3. Ship New Export" onAction="#handleNavigateToShipmentEntry"/>
+                        <MenuItem text="4. View Shipment Logs" onAction="#handleNavigateToShipmentLog"/>
+                        <MenuItem text="5. Compliance Chatbot" onAction="#handleNavigateToChatbot"/>
+                    </items>
+                </Menu>
+                <Menu text="Help"/>
+            </menus>
+        </MenuBar>
+
+        <!-- Heading -->
+        <Label styleClass="header-label"
+               text="License Issuance"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.rightAnchor="20.0"
+               AnchorPane.topAnchor="60.0"/>
+
+        <!-- Form Grid -->
+        <GridPane layoutX="20.0" layoutY="120.0" prefWidth="560.0"
+                  AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+
+            <columnConstraints>
+                <ColumnConstraints prefWidth="150.0"/>
+                <ColumnConstraints prefWidth="410.0"/>
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints prefHeight="45.0"/>
+                <RowConstraints prefHeight="45.0"/>
+                <RowConstraints prefHeight="45.0"/>
+            </rowConstraints>
+
+            <Label text="Select Exporter (IEC):" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="iecNumberComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                      promptText="Select an existing IEC"/>
+
+            <Label text="Exporter Firm:" GridPane.rowIndex="1"/>
+            <Label fx:id="exporterFirmNameLabel" text="[Details will appear here]"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Expiry Period (Days):" GridPane.rowIndex="2"/>
+            <TextField fx:id="expiryDaysField" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                       promptText="Enter 365 for one year"/>
+        </GridPane>
+
+        <!-- Button -->
+        <Button text="Issue New License"
+                AnchorPane.leftAnchor="200.0"
+                AnchorPane.topAnchor="290.0"
+                onAction="#handleIssueLicenseButton"/>
+
+        <!-- Result Section -->
+        <Label text="RESULT:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="350.0"
+               style="-fx-font-weight: bold;"/>
+        <Label fx:id="newLicenseNumberLabel"
+               text="[New License Number will appear here]"
+               AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="375.0"/>
+    </children>
+</AnchorPane>
